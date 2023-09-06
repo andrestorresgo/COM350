@@ -56,8 +56,9 @@
               <div class="form-group">
               <label for="accountType">Tipo de cuenta</label>
               <select class="form-control" id="accountType" name="accountType">
-                <option value="user">Usuario</option>
+                <option value="user">Estudiante</option>
                 <option value="admin">Admin</option>
+                <option value="docente">Docente</option>
               </select>
             </div>
               <button type="submit" class="btn btn-primary btn-block">Registrarse</button>

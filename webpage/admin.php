@@ -23,6 +23,39 @@ if (!isset($_SESSION['correo']) || $_SESSION['accountType'] != 'admin') {
     <title>Document</title>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="accountType.php">
+
+        Bienvenido, 
+
+        <?php
+        include 'config.php';
+        
+        if (isset($_SESSION["correo"])) {
+            $correo = $_SESSION["correo"];
+            $query = "SELECT nombre FROM persona WHERE correo = ?";
+            $stmt = $pdo->prepare($query);
+            $stmt->execute([$correo]);
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($user) {
+                echo $user["nombre"];
+            }
+        }
+        ?>!
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="informe.php">Informe</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
 <div class="container mt-5">
   <h2>Datos de usuario</h2>
   <table class="table">

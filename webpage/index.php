@@ -58,7 +58,7 @@ if (!isset($_SESSION['correo'])) {
               <a class="nav-link" href="mapa.html">Mapa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="grupos.html">Grupos</a>
+              <a class="nav-link" href="grupos.php">Grupos</a>
             </li>
             <?php
             if ($_SESSION["accountType"] == "admin") {
