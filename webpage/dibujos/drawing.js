@@ -1,0 +1,12 @@
+var newCanvas = document.createElement('canvas');
+newCanvas.width = 1536;
+newCanvas.height = 739;
+var newCtx = newCanvas.getContext('2d');
+newCtx.fillStyle='white';
+newCtx.fillRect(0, 0, newCanvas.width, newCanvas.height);
+newCtx.strokeStyle='black';
+newCtx.lineWidth=2;
+newCtx.strokeRect(314, 81, 394, 366);
+newCtx.strokeRect(532, 248, 372, 265);
+newCtx.strokeRect(812, 394, 364, 299);
+newCtx.strokeRect(282, 51, 962, 664);
